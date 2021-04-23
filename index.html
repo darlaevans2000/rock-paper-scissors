@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Russo+One&display=swap" rel="stylesheet">
+  <title> Rock, Paper, Scissors </title>
+</head>
+
+<body>
+  <main>
+    <section class="user-section" id="userSection">
+      <div class="user-info">
+        <h2 class="user-icon">😄</h2>
+        <h2 class="user">User</h2>
+        <h3 class="user-wins">Wins: </h3>
+        <h3 class="user-wins-num" id="userWinsNum">0</h3>
+        <button class="change-game hidden" id="changeGameButton">CHANGE GAME?</button>
+      </div>
+    </section>
+    <section class="main game-section" id="mainGameSection">
+      <h1 class="title">Rock, Paper, Scissors</h1>
+      <h2 id="chooseGameText">Choose your game!</h2>
+      <button class="classic-game-button">
+        <input type="radio" name="group1" value="Classic" class="button classic-button" id="classicButton">
+        <label for="classicButton">
+          <h3>✂️CLASSIC🪨</h3>
+          <h4 class="classicRulesTitle">Rules:</h4><br>
+          <p>Rock > Scissors</p><br>
+          <p>Paper > Rock</p><br>
+          <p>Scissors > Paper</p>
+      </button>
+      <section class="clasic-game-choices hidden" id="classicGameChoices">
+        <h2 id="chooseFighterText">Choose your fighter!</h2>
+        <div class="gameSelections" id="gameSelections">
+          <button class="rock">
+            <img src="./assets/rock.png" alt="rock">
+          </button>
+          <button class="paper">
+            <img src="./assets/paper.png" alt="paper">
+          </button>
+          <button class="scissors">
+            <img src="./assets/scissors.png" alt="scissors">
+          </button>
+        </div>
+        <h3 id="resultText"></h3>
+      </section>
+      <button class="difficult-game-button">
+        <input type="radio" name="group1" value="Difficult" class="button difficult-button" id="difficultButton">
+        <h3>🦎DIFFICULT👽</h3>
+        <h4 class="classicRulesTitle">Rules:</h4><br>
+        <p>Rock > Scissors & Lizzard</p><br>
+        <p>Paper > Rock & Alien</p><br>
+        <p>Scissors > Paper & Lizard</p><br>
+        <p>Lizard > Paper & Alien</p><br>
+        <p>Alien > Paper</p>
+      </button>
+      <section class="difficult-game-choices hidden" id="difficultGameChoices">
+        <h2 id="chooseFighterText">Choose your fighter!</h2>
+        <div class="gameSelections" id="gameSelections">
+          <button class="rock">
+            <img src="./assets/rock.png" alt="rock">
+          </button>
+          <button class="paper">
+            <img src="./assets/paper.png" alt="paper">
+          </button>
+          <button class="scissors">
+            <img src="./assets/scissors.png" alt="scissors">
+          </button>
+          <button class="lizard">
+            <img src="./assets/lizard.png" alt="lizard">
+          </button>
+          <button class="alien">
+            <img src="./assets/alien.png" alt="alien">
+          </button>
+        </div>
+        <h3 id="resultText"></h3>
+      </section>
+    </section>
+    <section class="computer-section" id="computerSection">
+      <div class="computer-info">
+        <h2 class="computer-icon">💻</h2>
+        <h2 class="computer">Computer</h2>
+        <h3 class="computer-wins">Wins: </h3>
+        <h3 class="computer-wins-num" id="computerWinsNum">0</h3>
+      </div>
+    </section>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
