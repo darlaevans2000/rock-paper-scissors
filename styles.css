@@ -1,0 +1,133 @@
+* {
+  font-family: Russo One;
+  background: #29293d;
+  color: white;
+  font-weight: 300;
+  margin: 0;
+  padding:0
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+h1 {
+  border: none;
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+}
+
+h2 {
+  align-items: center;
+  justify-content: center;
+  border: none;
+  display: flex;
+}
+
+img {
+  width: 60%;
+  height: 60%;
+}
+
+.game-section {
+  display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 76%;
+}
+
+.game-type-button {
+  background-color: #14141f;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+  height: 300px;
+  margin: 20px auto;
+  width: 300px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.game-type-button p {
+  background-color: #14141f;
+}
+
+
+.game-type-button:hover {
+  background-color: #0a0a0f;
+}
+
+.game-type-button:hover p {
+  background-color: #0a0a0f;
+}
+
+h3 {
+  font-size: 29px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #4d194d;
+  margin-bottom: 7px;
+}
+
+h4 {
+  font-size: 22px;
+  background: #4d194d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.button-img {
+  cursor: pointer;
+  border: none;
+}
+
+.user-section {
+  display: flex;
+  flex-direction: column;
+  background: #4d194d;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 12%;
+  min-width: 9rem;
+}
+.computer-section {
+display: flex;
+flex-direction: column;
+background: #4d194d;
+padding-top: 2rem;
+padding-left: 1rem;
+padding-right: 1rem;
+width: 12%;
+min-width: 9rem;
+}
+
+.change-game {
+  background-color: #14141f;
+  border: solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+  height: 65px;
+  margin: 100px auto;
+  width: 115px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
