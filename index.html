@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -10,85 +10,81 @@
 </head>
 
 <body>
-  <main>
-    <section class="user-section" id="userSection">
-      <div class="user-info">
-        <h2 class="user-icon">😄</h2>
-        <h2 class="user">User</h2>
-        <h3 class="user-wins">Wins: </h3>
-        <h3 class="user-wins-num" id="userWinsNum">0</h3>
-        <button class="change-game hidden" id="changeGameButton">CHANGE GAME?</button>
+  <section class="user-section" id="userSection">
+    <h3 class="user-icon">😄</h3>
+    <h3 class="user">User</h3>
+    <h4 class="user-wins">Wins: </h4>
+    <button class="change-game-button hidden" id="changeGameButton">CHANGE GAME?</button>
+  </section>
+  <section class="game-section" id="mainGameSection">
+    <h1 class="title">Rock, Paper, Scissors</h1>
+    <h2 id="chooseGameText">Choose your game!</h2>
+    <button class="game-type-button">
+      <label for="classicButton">
+        <p>
+          ✂️CLASSIC🪨<br>
+          Rules:<br>
+          Rock > Scissors<br>
+          Paper > Rock<br>
+          Scissors > Paper
+        </p>
+    </button>
+    <section class="clasic-game-choices hidden" id="classicGameChoices">
+      <h2 id="chooseFighterText">Choose your fighter!</h2>
+      <div class="gameSelections" id="gameSelections">
+        <button id="rock" class="button-img">
+          <img src="./assets/rock.png" alt="rock">
+        </button>
+        <button id="paper" class="button-img">
+          <img src="./assets/paper.png" alt="paper">
+        </button>
+        <button id="scissors" class="button-img">
+          <img src="./assets/scissors.png" alt="scissors">
+        </button>
       </div>
+      <h3 id="resultText"></h3>
     </section>
-    <section class="main game-section" id="mainGameSection">
-      <h1 class="title">Rock, Paper, Scissors</h1>
-      <h2 id="chooseGameText">Choose your game!</h2>
-      <button class="classic-game-button">
-        <input type="radio" name="group1" value="Classic" class="button classic-button" id="classicButton">
-        <label for="classicButton">
-          <h3>✂️CLASSIC🪨</h3>
-          <h4 class="classicRulesTitle">Rules:</h4><br>
-          <p>Rock > Scissors</p><br>
-          <p>Paper > Rock</p><br>
-          <p>Scissors > Paper</p>
-      </button>
-      <section class="clasic-game-choices hidden" id="classicGameChoices">
-        <h2 id="chooseFighterText">Choose your fighter!</h2>
-        <div class="gameSelections" id="gameSelections">
-          <button class="rock">
-            <img src="./assets/rock.png" alt="rock">
-          </button>
-          <button class="paper">
-            <img src="./assets/paper.png" alt="paper">
-          </button>
-          <button class="scissors">
-            <img src="./assets/scissors.png" alt="scissors">
-          </button>
-        </div>
-        <h3 id="resultText"></h3>
-      </section>
-      <button class="difficult-game-button">
-        <input type="radio" name="group1" value="Difficult" class="button difficult-button" id="difficultButton">
-        <h3>🦎DIFFICULT👽</h3>
-        <h4 class="classicRulesTitle">Rules:</h4><br>
-        <p>Rock > Scissors & Lizzard</p><br>
-        <p>Paper > Rock & Alien</p><br>
-        <p>Scissors > Paper & Lizard</p><br>
-        <p>Lizard > Paper & Alien</p><br>
-        <p>Alien > Paper</p>
-      </button>
-      <section class="difficult-game-choices hidden" id="difficultGameChoices">
-        <h2 id="chooseFighterText">Choose your fighter!</h2>
-        <div class="gameSelections" id="gameSelections">
-          <button class="rock">
-            <img src="./assets/rock.png" alt="rock">
-          </button>
-          <button class="paper">
-            <img src="./assets/paper.png" alt="paper">
-          </button>
-          <button class="scissors">
-            <img src="./assets/scissors.png" alt="scissors">
-          </button>
-          <button class="lizard">
-            <img src="./assets/lizard.png" alt="lizard">
-          </button>
-          <button class="alien">
-            <img src="./assets/alien.png" alt="alien">
-          </button>
-        </div>
-        <h3 id="resultText"></h3>
-      </section>
-    </section>
-    <section class="computer-section" id="computerSection">
-      <div class="computer-info">
-        <h2 class="computer-icon">💻</h2>
-        <h2 class="computer">Computer</h2>
-        <h3 class="computer-wins">Wins: </h3>
-        <h3 class="computer-wins-num" id="computerWinsNum">0</h3>
+    <button class="game-type-button">
+      <div class="rules">
+        <p>🦎DIFFICULT👽<br>
+          Rules:<br>
+          Rock > Scissors & Lizzard<br>
+          Paper > Rock & Alien<br>
+          Scissors > Paper & Lizard<br>
+          Lizard > Paper & Alien<br>
+          Alien > Scissors & Rock</p>
+        <div>
+    </button>
+    <section class="difficult-game-choices hidden" id="difficultGameChoices">
+      <h2 id="chooseFighterText">Choose your fighter!</h2>
+      <div class="gameSelections" id="gameSelections">
+        <button id="rock" class="button-img">
+          <img src="./assets/rock.png" alt="rock">
+        </button>
+        <button id="paper" class="button-img">
+          <img src="./assets/paper.png" alt="paper">
+        </button>
+        <button id="scissors" class="button-img">
+          <img src="./assets/scissors.png" alt="scissors">
+        </button>
+        <button id="lizard" class="button-img">
+          <img src="./assets/lizard.png" alt="lizard">
+        </button>
+        <button id="alien" class="button-img">
+          <img src="./assets/alien.png" alt="alien">
+        </button>
       </div>
+      <h3 id="resultText"></h3>
     </section>
-    <script type="text/javascript" src="game.js"></script>
-    <script type="text/javascript" src="player.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+  </section>
+    <section id="computerSide" class="computer-section">
+      <h3 class="computer-icon">💻</h3>
+      <h3 class="computer">Computer</h3>
+      <h4 class="computer-wins">Wins: </h4>
+      </section>
 </body>
+<script src="player.js"></script>
+<script src="game.js"></script>
+<script src="main.js"></script>
+
 </html>
