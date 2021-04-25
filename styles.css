@@ -93,7 +93,7 @@ img {
 }
 
 /* right and left sections */
-.user-section, .computer-section {
+.user-section {
   display: flex;
   flex-direction: column;
   background: #4d194d;
@@ -101,6 +101,22 @@ img {
   padding-left: 16px;
   padding-right: 16px;
   width: 12%;
+  border-right: 6px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;;
+}
+
+.computer-section {
+  display: flex;
+  flex-direction: column;
+  background: #4d194d;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 12%;
+  border-left: 6px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
 }
 
 .change-game-button {
