@@ -13,13 +13,13 @@
   <section class="user-section" id="userSection">
     <h3 class="user-icon">😄</h3>
     <h3 class="user">User</h3>
-    <h4 class="user-wins">Wins: </h4>
+    <h4 class="user-wins" id="userWins">Wins: </h4>
     <button class="change-game-button hidden" id="changeGameButton">CHANGE GAME?</button>
   </section>
   <section class="game-section" id="mainGameSection">
     <h1 class="title">Rock, Paper, Scissors</h1>
     <h2 id="chooseGameText">Choose your game!</h2>
-    <button class="game-type-button">
+    <button class="game-type-button" id="classicGameBtn">
       <label for="classicButton">
         <p>
           ✂️CLASSIC🪨<br>
@@ -29,22 +29,7 @@
           Scissors > Paper
         </p>
     </button>
-    <section class="clasic-game-choices hidden" id="classicGameChoices">
-      <h2 id="chooseFighterText">Choose your fighter!</h2>
-      <div class="gameSelections" id="gameSelections">
-        <button id="rock" class="button-img">
-          <img src="./assets/rock.png" alt="rock">
-        </button>
-        <button id="paper" class="button-img">
-          <img src="./assets/paper.png" alt="paper">
-        </button>
-        <button id="scissors" class="button-img">
-          <img src="./assets/scissors.png" alt="scissors">
-        </button>
-      </div>
-      <h3 id="resultText"></h3>
-    </section>
-    <button class="game-type-button">
+    <button class="game-type-button" id="difficultGameBtn">
       <div class="rules">
         <p>🦎DIFFICULT👽<br>
           Rules:<br>
@@ -55,32 +40,49 @@
           Alien > Scissors & Rock</p>
         <div>
     </button>
-    <section class="difficult-game-choices hidden" id="difficultGameChoices">
-      <h2 id="chooseFighterText">Choose your fighter!</h2>
-      <div class="gameSelections" id="gameSelections">
-        <button id="rock" class="button-img">
-          <img src="./assets/rock.png" alt="rock">
-        </button>
-        <button id="paper" class="button-img">
-          <img src="./assets/paper.png" alt="paper">
-        </button>
-        <button id="scissors" class="button-img">
-          <img src="./assets/scissors.png" alt="scissors">
-        </button>
-        <button id="lizard" class="button-img">
-          <img src="./assets/lizard.png" alt="lizard">
-        </button>
-        <button id="alien" class="button-img">
-          <img src="./assets/alien.png" alt="alien">
-        </button>
-      </div>
-      <h3 id="resultText"></h3>
-    </section>
+  </section>
+  <section class="difficult-game-choices hidden" id="difficultGameChoices">
+    <h1 class="title">Rock, Paper, Scissors, Lizard, Alien</h1>
+    <h2 id="chooseFighterText">Choose your fighter!</h2>
+    <div class="difficult-game" id="difficultGame">
+      <button id="rock" class="button-img-difficult">
+        <img src="./assets/rock.png" alt="rock">
+      </button>
+      <button id="paper" class="button-img-difficult">
+        <img src="./assets/paper.png" alt="paper">
+      </button>
+      <button id="scissors" class="button-img-difficult">
+        <img src="./assets/scissors.png" alt="scissors">
+      </button>
+      <button id="lizard" class="button-img-difficult">
+        <img src="./assets/lizard.png" alt="lizard">
+      </button>
+      <button id="alien" class="button-img-difficult">
+        <img src="./assets/alien.png" alt="alien">
+      </button>
+    </div>
+    <h5 id="resultText"></h5>
+  </section>
+  <section class="clasic-game-choices hidden" id="classicGameChoices">
+    <h1 class="title">Rock, Paper, Scissors</h1>
+    <h2 id="chooseFighterText">Choose your fighter!</h2>
+    <h5 id="resultText" class="result-text"></h5>
+    <div class="classic-game" id="classicGame">
+      <button id="rockClassic" class="button-img-classic">
+        <img src="./assets/rock.png" alt="rock">
+      </button>
+      <button id="paperClassic" class="button-img-classic">
+        <img src="./assets/paper.png" alt="paper">
+      </button>
+      <button id="scissorsClassic" class="button-img-classic">
+        <img src="./assets/scissors.png" alt="scissors">
+      </button>
+    </div>
   </section>
     <section id="computerSide" class="computer-section">
       <h3 class="computer-icon">💻</h3>
       <h3 class="computer">Computer</h3>
-      <h4 class="computer-wins">Wins: </h4>
+      <h4 class="computer-wins" id="computerWins">Wins: </h4>
       </section>
 </body>
 <script src="player.js"></script>

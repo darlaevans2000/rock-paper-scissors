@@ -45,8 +45,8 @@ h4 {
 }
 
 img {
-  width: 60%;
-  height: 60%;
+  width: 45%;
+  height: 45%;
 }
 
 /* game section and game type selections */
@@ -87,13 +87,13 @@ img {
 }
 
 /* button images */
-.button-img {
+.button-img-classic {
   cursor: pointer;
   border: none;
 }
 
 /* right and left sections */
-.user-section, .computer-section {
+.user-section {
   display: flex;
   flex-direction: column;
   background: #4d194d;
@@ -101,6 +101,22 @@ img {
   padding-left: 16px;
   padding-right: 16px;
   width: 12%;
+  border-right: 6px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;;
+}
+
+.computer-section {
+  display: flex;
+  flex-direction: column;
+  background: #4d194d;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 12%;
+  border-left: 6px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
 }
 
 .change-game-button {
@@ -119,6 +135,17 @@ img {
   align-items: center;
 }
 
+.classic-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: r
+}
+
+.result-text {
+  color: white;
+  font-size: 23px;
+}
 .hidden {
   display: none;
 }
