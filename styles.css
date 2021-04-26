@@ -45,8 +45,8 @@ h4 {
 }
 
 img {
-  width: 60%;
-  height: 60%;
+  width: 45%;
+  height: 45%;
 }
 
 /* game section and game type selections */
@@ -133,6 +133,13 @@ img {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.classic-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: r
 }
 
 .hidden {

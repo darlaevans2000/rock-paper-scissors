@@ -13,7 +13,8 @@ class Game{
       return classicChoices[randomClassicChoice];
     } else {
       var randomDifficultChoice = this.getRandomIndex(difficultChoices)
-      return difficultChoices[randomClassicChoice]
+      return difficultChoices[randomClassicChoice];
     }
   };
+
 }
