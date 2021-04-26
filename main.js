@@ -15,6 +15,8 @@ var resultText = document.getElementById("resultText");
 var userWins = document.getElementById("userWins");
 var computerWins = document.getElementById("computerWins");
 var resultText = document.getElementById("resultText");
+
+var classicGameSection = document.getElementById("classicGame");
 var game = new Game();
 
 // page view event ls
@@ -28,8 +30,23 @@ paperBtn.addEventListener("click", paperChoice);
 function classicGamePage(){
   hide(mainPage);
   show(classicPageView);
-  show(resultText);
+  // show(resultText);
 };
+function renderClassicPg(){
+  classicGameSection.innerHTML = `
+  <div class="classic-game" id="classicGame">
+    <button id="rockClassic" class="button-img-classic">
+      <img src="./assets/rock.png" alt="rock">
+    </button>
+    <button id="paperClassic" class="button-img-classic">
+      <img src="./assets/paper.png" alt="paper">
+    </button>
+    <button id="scissorsClassic" class="button-img-classic">
+      <img src="./assets/scissors.png" alt="scissors">
+    </button>
+  </div>
+  `
+}
 // hide/show
 function hide(element) {
   element.classList.add("hidden");
@@ -51,3 +68,8 @@ function paperChoice() {
 function scissorsChoice() {
   game.determineWinner("scissors");
 }
+
+function playAgain() {
+  resultText.innerText = "";
+  classicGamePage();
+};

@@ -33,15 +33,12 @@ class Game {
   // this.user.wins.innerText = `Wins: ${this.user.wins}`;
 
   //classic game
+
   determineWinner(choice) {
     if (this.type === "classic") {
       var classicComputerChoice = this.randomChoice();
       var classicUserChoice = choice;
 
-      classicGame.innerHTML = `
-    <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
-    <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
-    `
       if ((classicComputerChoice === "rock" && classicUserChoice === "rock") ||
         (classicComputerChoice === "paper" && classicUserChoice === "paper") ||
         (classicComputerChoice === "scissors" && classicUserChoice === "scissors")) {
@@ -58,14 +55,20 @@ class Game {
 
         this.winAlert();
       }
-
     }
+    classicGame.innerHTML = `
+  <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
+  <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
+  `
+    // setTimeout(function() {playAgain()}, 2500)
   };
 
   winAlert() {
-    resultText.innerText = "You won against the computer!";
+  resultText.innerText = "You won against the computer!";
    this.user.wins++;
    userWins.innerText = `Wins: ${this.user.wins}`;
+   setTimeout(renderClassicPg, 1000);
+   console.log("win alert");
    //save wins to storage
    // show selection page
  };
@@ -74,9 +77,20 @@ class Game {
    resultText.innerText = "Uh-oh. Win for computer. Try again!";
    this.computer.wins++;
    computerWins.innerText = `Wins: ${this.computer.wins}`;
+   setTimeout(renderClassicPg, 1000);
+   console.log("win alert");
  };
 
  tieAlert() {
    resultText.innerText = "TIE!";
+   setTimeout(renderClassicPg, 1000);
+   console.log("win alert");
  };
+
+// showSelections() {
+// classicGame.innerHTML = `
+// <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
+// <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
+// `
+// }
 };
