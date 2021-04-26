@@ -1,19 +1,36 @@
+//game type btns qs
 var classicBtn = document.getElementById("classicGameBtn");
 var difficultBtn = document.getElementById("difficultGameBtn");
-
+// game type pages
 var classicPageView = document.getElementById("classicGameChoices");
 var difficultPageView = document.getElementById("difficultGame");
-
+//main view
 var mainPage = document.getElementById("mainGameSection");
+// game buttons
+var rockBtn = document.getElementById("rockClassic");
+var paperBtn = document.getElementById("paperClassic");
+var scissorsBtn = document.getElementById("scissorsClassic");
+//text
+var resultText = document.getElementById("resultText");
+var userWins = document.getElementById("userWins");
+var computerWins = document.getElementById("computerWins");
+var resultText = document.getElementById("resultText");
+var game = new Game();
 
+// page view event ls
 classicBtn.addEventListener("click", classicGamePage);
-difficultBtn.addEventListener("click", difficultGamePage);
-
+// difficultBtn.addEventListener("click", difficultGamePage);
+// user selection event ls
+rockBtn.addEventListener("click", rockChoice);
+scissorsBtn.addEventListener("click", scissorsChoice);
+paperBtn.addEventListener("click", paperChoice);
+// page vw functions
 function classicGamePage(){
   hide(mainPage);
   show(classicPageView);
+  show(resultText);
 };
-
+// hide/show
 function hide(element) {
   element.classList.add("hidden");
 };
@@ -21,3 +38,16 @@ function hide(element) {
 function show(element) {
   element.classList.remove("hidden");
 };
+// user selections
+function rockChoice() {
+  console.log(rock);
+  game.determineWinner("rock");
+}
+
+function paperChoice() {
+  game.determineWinner("paper");
+}
+
+function scissorsChoice() {
+  game.determineWinner("scissors");
+}

@@ -87,7 +87,7 @@ img {
 }
 
 /* button images */
-.button-img {
+.button-img-classic {
   cursor: pointer;
   border: none;
 }
@@ -142,6 +142,10 @@ img {
   flex-direction: r
 }
 
+.result-text {
+  color: white;
+  font-size: 23px;
+}
 .hidden {
   display: none;
 }
