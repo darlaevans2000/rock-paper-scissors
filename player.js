@@ -12,20 +12,20 @@ class Player {
    localStorage.setItem("computerWins", JSON.stringify(storeComputerWins));
    localStorage.setItem("humanWins", storeUserWins);
    localStorage.setItem("computerWins", storeComputerWins);
-  }
+ };
 
   retrieveUserWinsFromStorage(){
     var userWinsFromStorage = localStorage.getItem("humanWins");
     var userWins = JSON.parse(userWinsFromStorage);
     this.wins = userWins;
     return userWins;
-  }
+  };
 
   retrieveComputerWinsFromStorage(){
     var computerWinsFromStorage = localStorage.getItem("computerWins");
     var computerWins = JSON.parse(computerWinsFromStorage);
     this.wins = computerWins;
     return computerWins;
-  }
-  
+  };
+
 };
