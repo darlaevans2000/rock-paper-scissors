@@ -142,8 +142,8 @@ img {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-  "x x y y"
-  ". b b ."
+  "a a b b"
+  ". c c ."
   ". . . .";
 }
 
@@ -151,22 +151,22 @@ img {
   width: 76%;
 }
 
-.button-img-classic1 {
-  grid-area: x;
+.button-classic-rock {
+  grid-area: a;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-.button-img-classic2 {
-  grid-area: y;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.button-img-classic3 {
+.button-classic-paper {
   grid-area: b;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-classic-scissors {
+  grid-area: c;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -208,45 +208,39 @@ img {
   ". . . . . . .";
 }
 
-.button-img-difficult {
-  cursor: pointer;
-  border: none;
-}
-
-
 .difficult-game-choices {
   width: 76%;
 }
 
-.button-img-difficult1 {
+.button-difficult-rock {
   grid-area: a;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-.button-img-difficult2 {
+.button-difficult-paper {
   grid-area: b;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-.button-img-difficult3 {
+.button-difficult-scissors {
   grid-area: c;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-.button-img-difficult4 {
+.button-difficult-lizard {
   grid-area: d;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-.button-img-difficult5 {
+.button-difficult-alien {
   grid-area: e;
     border: none;
     cursor: pointer;
