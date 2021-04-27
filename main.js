@@ -64,7 +64,7 @@ if (localStorage.computerWins === undefined) {
 }
 
 //FUNCTIONS 3️⃣
-// Classic Game 🪨✂️
+//🪨CLASSIC GAME FUNCTIONS✂️
 function classicGamePage(){
   game.type = "classic";
   hide([mainPage, winnerWrapClassic, resultTextClassic]);
@@ -94,7 +94,7 @@ function scissorsChoiceClassic() {
   game.determineWinner("scissors");
 };
 
-// Difficult Game 🦎👽
+//🦎DIFFICULT GAME FUNCTIONS👽
 function difficultGamePage(){
   game.type = "difficult";
   hide([mainPage, winnerWrapDifficult, resultTextDifficult]);
@@ -127,7 +127,7 @@ function alienChoiceDifficult() {
   game.determineWinner("alien");
 };
 
-// 💚 Show/Hide 🛑
+// 💚 SHOW/HIDE 🛑
 function hide(elements) {
   for (var i = 0; i < elements.length; i++) {
     element = elements[i];
