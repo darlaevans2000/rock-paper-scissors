@@ -28,9 +28,6 @@ class Game {
       return difficultChoices[randomDifficultChoice];
     }
   };
-  // winners
-  // this.computer.wins.innerText = `Wins: ${this.computer.wins}`;
-  // this.user.wins.innerText = `Wins: ${this.user.wins}`;
 
   //classic game
 
@@ -60,8 +57,6 @@ class Game {
       <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
       `
     } else {
-      computerWins.innerText = this.computer.wins;
-      userWins.innerText = this.user.wins;
 
       var difficultComputerChoice = this.randomChoice();
       var difficultUserChoice = choice;
@@ -101,7 +96,9 @@ class Game {
 
   winAlert() {
   this.user.wins++;
-  userWins.innerText = `Wins: ${this.user.wins}`;
+  userWins.innerText = `${this.user.wins}`;
+  this.user.saveWinsToStorage();
+  this.computer.saveWinsToStorage();
   if (this.type === "classic"){
     resultTextClassic.innerText = "You won against the computer!";
     setTimeout(classicGamePage, 2000);
@@ -115,7 +112,9 @@ class Game {
 
  loseAlert() {
    this.computer.wins++;
-   computerWins.innerText = `Wins: ${this.computer.wins}`;
+   computerWins.innerText = `${this.computer.wins}`;
+   this.user.saveWinsToStorage();
+   this.computer.saveWinsToStorage();
    if (this.type === "classic"){
      resultTextClassic.innerText = "Uh-oh. Win for computer. Try again!";
      displayWinnerClassic();
@@ -138,11 +137,5 @@ class Game {
    displayWinnerDifficult();
  }
  };
-
-// showSelections() {
-// classicGame.innerHTML = `
-// <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
-// <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
-// `
-// }
+ 
 };

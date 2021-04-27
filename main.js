@@ -45,6 +45,18 @@ paperBtnDifficult.addEventListener("click", paperChoiceDifficult);
 lizardBtnDifficult.addEventListener("click", lizardChoiceDifficult);
 alienBtnDifficult.addEventListener("click", alienChoiceDifficult);
 
+if (localStorage.userWins === undefined) {
+  localStorage.userWins = 0;
+} else {
+  userWins.innerText = game.user.retrieveUserWinsFromStorage();
+}
+
+if (localStorage.computerWins === undefined) {
+  localStorage.computerWins = 0;
+} else {
+  computerWins.innerText = game.computer.retrieveComputerWinsFromStorage();
+}
+
 // page vw functions
 function classicGamePage(){
   game.type = "classic";
