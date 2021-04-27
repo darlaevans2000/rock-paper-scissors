@@ -31,6 +31,7 @@ var difficultGameSection = document.getElementById("difficultGame");
 //Wins
 var userWins = document.getElementById("userWins");
 var computerWins = document.getElementById("computerWins");
+var clearScoreBtn = document.getElementById("clearScoreBtn");
 
 //Instantiate Game
 var game = new Game();
@@ -51,6 +52,7 @@ paperBtnDifficult.addEventListener("click", paperChoiceDifficult);
 lizardBtnDifficult.addEventListener("click", lizardChoiceDifficult);
 alienBtnDifficult.addEventListener("click", alienChoiceDifficult);
 
+clearScoreBtn.addEventListener("click", clearTheWins);
 //Local Storage 🗄
 if (localStorage.userWins === undefined) {
   localStorage.userWins = 0;
@@ -127,6 +129,9 @@ function alienChoiceDifficult() {
   game.determineWinnerDifficult("alien");
 };
 
+function clearTheWins(){
+  game.clear();
+}
 // Show/Hide
 function hide(elements) {
   for (var i = 0; i < elements.length; i++) {

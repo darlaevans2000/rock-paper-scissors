@@ -8,14 +8,14 @@ class Player {
   saveWinsToStorage() {
     var storeUserWins = game.user.wins;
     var storeComputerWins = game.computer.wins;
-    localStorage.setItem("humanWins", JSON.stringify(storeUserWins));
+    localStorage.setItem("userWins", JSON.stringify(storeUserWins));
     localStorage.setItem("computerWins", JSON.stringify(storeComputerWins));
-    localStorage.setItem("humanWins", storeUserWins);
+    localStorage.setItem("userWins", storeUserWins);
     localStorage.setItem("computerWins", storeComputerWins);
   };
 
   retrieveUserWinsFromStorage() {
-    var userWinsFromStorage = localStorage.getItem("humanWins");
+    var userWinsFromStorage = localStorage.getItem("userWins");
     var userWins = JSON.parse(userWinsFromStorage);
     this.wins = userWins;
     return userWins;
