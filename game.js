@@ -56,7 +56,7 @@ class Game {
         this.winAlert();
       }
     }
-    classicGame.innerHTML = `
+    winnerWrap.innerHTML = `
   <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
   <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
   `
@@ -67,7 +67,8 @@ class Game {
   resultText.innerText = "You won against the computer!";
    this.user.wins++;
    userWins.innerText = `Wins: ${this.user.wins}`;
-   setTimeout(renderClassicPg, 1000);
+   displayWinner();
+   setTimeout(classicGamePage, 2000);
    console.log("win alert");
    //save wins to storage
    // show selection page
@@ -77,13 +78,15 @@ class Game {
    resultText.innerText = "Uh-oh. Win for computer. Try again!";
    this.computer.wins++;
    computerWins.innerText = `Wins: ${this.computer.wins}`;
-   setTimeout(renderClassicPg, 1000);
+   displayWinner();
+   setTimeout(classicGamePage, 2000);
    console.log("win alert");
  };
 
  tieAlert() {
    resultText.innerText = "TIE!";
-   setTimeout(renderClassicPg, 1000);
+   displayWinner();
+   setTimeout(classicGamePage, 2000);
    console.log("win alert");
  };
 
