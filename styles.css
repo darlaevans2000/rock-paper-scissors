@@ -137,10 +137,51 @@ img {
   align-items: center;
 }
 
+.classic-game-choices {
+  width: 76%;
+}
+
 .classic-game {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "x x y y"
+    ". b b ."
+    ". . . .";
+}
+
+.button-img-classic1 {
+  grid-area: x;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.winner-wrap-classic{
+  width: 70%;
+  margin-left: 12%;
+  margin-right: 12%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button-img-classic2 {
+  grid-area: y;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-img-classic3 {
+  grid-area: b;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .result-text-difficult {
@@ -164,6 +205,71 @@ img {
 .button-img-difficult {
   cursor: pointer;
   border: none;
+}
+
+.difficult-game {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  margin-right: 12%;
+  margin-top: 10%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". a a b b c c"
+    ". . d d e e ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+
+.difficult-game-choices {
+  width: 76%;
+}
+
+.button-img-difficult1 {
+  grid-area: a;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-img-difficult2 {
+  grid-area: b;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-img-difficult3 {
+  grid-area: c;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-img-difficult4 {
+  grid-area: d;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-img-difficult5 {
+  grid-area: e;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.winner-wrap-difficult {
+  width: 70%;
+  margin-left: 12%;
+  margin-right: 12%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hidden {
