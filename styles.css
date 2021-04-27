@@ -117,7 +117,7 @@ img {
 }
 
 /* Change Game Button */
-.change-game-button {
+.change-game-btn {
   background-color: #14141f;
   border: solid transparent;
   border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
