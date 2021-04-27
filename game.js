@@ -24,8 +24,8 @@ class Game {
       var randomClassicChoice = this.getRandomIndex(classicChoices);
       return classicChoices[randomClassicChoice];
     } else {
-      var randomDifficultChoice = this.getRandomIndex(difficultChoices)
-      return difficultChoices[randomClassicChoice];
+      var randomDifficultChoice = this.getRandomIndex(difficultChoices);
+      return difficultChoices[randomDifficultChoice];
     }
   };
   // winners
@@ -55,39 +55,88 @@ class Game {
 
         this.winAlert();
       }
+      winnerWrapClassic.innerHTML = `
+      <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
+      <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
+      `
+    } else {
+      computerWins.innerText = this.computer.wins;
+      userWins.innerText = this.user.wins;
+
+      var difficultComputerChoice = this.randomChoice();
+      var difficultUserChoice = choice;
+
+      if ( (difficultComputerChoice === "rock" && difficultUserChoice === "rock")
+        || (difficultComputerChoice === "paper" && difficultUserChoice === "paper")
+        || (difficultComputerChoice === "scissors" && difficultUserChoice === "scissors")
+        || (difficultComputerChoice === "lizard" && difficultUserChoice === "lizard")
+        || (difficultComputerChoice === "alien" && difficultUserChoice === "alien") ) {
+
+        this.tieAlert();
+
+      } else if ( (difficultComputerChoice === "rock" && difficultUserChoice === "lizard")
+        || (difficultComputerChoice === "rock" && difficultUserChoice === "scissors")
+        || (difficultComputerChoice === "paper" && difficultUserChoice === "scissors")
+        || (difficultComputerChoice === "paper" && difficultUserChoice === "alien")
+        || (difficultComputerChoice === "scissors" && difficultUserChoice === "paper")
+        || (difficultComputerChoice === "scissors" && difficultUserChoice === "lizard")
+        || (difficultComputerChoice === "lizard" && difficultUserChoice === "paper")
+        || (difficultComputerChoice === "lizard" && difficultUserChoice === "alien")
+        || (difficultComputerChoice === "alien" && difficultUserChoice === "rock")
+        || (difficultComputerChoice === "alien" && difficultUserChoice === "scissors") ) {
+
+        this.loseAlert();
+
+      } else {
+
+        this.winAlert();
+
+      }
+      winnerWrapDifficult.innerHTML = `
+      <img src="./assets/${difficultUserChoice}.png" alt="${difficultUserChoice}">
+      <img src="./assets/${difficultComputerChoice}.png" alt="${difficultComputerChoice}">
+      `
     }
-    winnerWrap.innerHTML = `
-  <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
-  <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
-  `
-    // setTimeout(function() {playAgain()}, 2500)
   };
 
   winAlert() {
-  resultText.innerText = "You won against the computer!";
-   this.user.wins++;
-   userWins.innerText = `Wins: ${this.user.wins}`;
-   displayWinner();
-   setTimeout(classicGamePage, 2000);
-   console.log("win alert");
-   //save wins to storage
-   // show selection page
+  this.user.wins++;
+  userWins.innerText = `Wins: ${this.user.wins}`;
+  if (this.type === "classic"){
+    resultTextClassic.innerText = "You won against the computer!";
+    setTimeout(classicGamePage, 2000);
+    displayWinnerClassic();
+  } else {
+    resultTextDifficult.innerText = "You won against the computer!";
+    setTimeout(difficultGamePage, 2000);
+    displayWinnerDifficult();
+  }
  };
 
  loseAlert() {
-   resultText.innerText = "Uh-oh. Win for computer. Try again!";
    this.computer.wins++;
    computerWins.innerText = `Wins: ${this.computer.wins}`;
-   displayWinner();
-   setTimeout(classicGamePage, 2000);
-   console.log("win alert");
+   if (this.type === "classic"){
+     resultTextClassic.innerText = "Uh-oh. Win for computer. Try again!";
+     displayWinnerClassic();
+     setTimeout(classicGamePage, 2000);
+   } else {
+     resultTextDifficult.innerText = "Uh-oh. Win for computer. Try again!";
+     setTimeout(difficultGamePage, 2000);
+     displayWinnerDifficult();
+   }
  };
 
  tieAlert() {
-   resultText.innerText = "TIE!";
-   displayWinner();
+   if (this.type === "classic"){
+     resultTextClassic.innerText = "TIE!";
+   displayWinnerClassic();
    setTimeout(classicGamePage, 2000);
-   console.log("win alert");
+ } else {
+   resultTextDifficult.innerText = "TIE!";
+   setTimeout(difficultGamePage, 2000);
+   displayWinnerDifficult();
+ }
  };
 
 // showSelections() {
