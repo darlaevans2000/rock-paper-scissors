@@ -66,19 +66,19 @@ if (localStorage.computerWins === undefined) {
 
 //3️⃣FUNCTIONS
 //Main PG
-function viewMainPage(){
+function viewMainPage() {
   show([mainPage]);
   hide([changeGameBtn, classicPageView, classicGameSection, chooseFighterTextClassic, difficultPageView, difficultGameSection, chooseFighterTextDifficult]);
 };
 
 //🪨Classic Game✂️
-function classicGamePage(){
+function classicGamePage() {
   game.type = "classic";
   hide([mainPage, winnerWrapClassic, resultTextClassic]);
   show([classicPageView, classicGameSection, chooseFighterTextClassic, changeGameBtn]);
 };
 
-function displayWinnerClassic(){
+function displayWinnerClassic() {
   show([winnerWrapClassic, resultTextClassic]);
   hide([classicGameSection, chooseFighterTextClassic, changeGameBtn]);
 };
@@ -96,13 +96,13 @@ function scissorsChoiceClassic() {
 };
 
 //🦎Difficult Game👽
-function difficultGamePage(){
+function difficultGamePage() {
   game.type = "difficult";
   hide([mainPage, winnerWrapDifficult, resultTextDifficult]);
   show([difficultPageView, difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
 };
 
-function displayWinnerDifficult(){
+function displayWinnerDifficult() {
   show([winnerWrapDifficult, resultTextDifficult]);
   hide([difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
 };
