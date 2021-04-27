@@ -1,6 +1,7 @@
 //game type btns qs
 var classicBtn = document.getElementById("classicGameBtn");
 var difficultBtn = document.getElementById("difficultGameBtn");
+var changeGameBtn = document.getElementById("changeGameButton");
 // game type pages
 var classicPageView = document.getElementById("classicGameChoices");
 var difficultPageView = document.getElementById("difficultGameChoices");
@@ -32,6 +33,7 @@ var game = new Game();
 // page view event ls
 classicBtn.addEventListener("click", classicGamePage);
 difficultBtn.addEventListener("click", difficultGamePage);
+changeGameBtn.addEventListener("click", viewMainPage);
 // user selection event ls
 rockBtnClassic.addEventListener("click", rockChoiceClassic);
 scissorsBtnClassic.addEventListener("click", scissorsChoiceClassic);
@@ -42,6 +44,7 @@ scissorsBtnDifficult.addEventListener("click", scissorsChoiceDifficult);
 paperBtnDifficult.addEventListener("click", paperChoiceDifficult);
 lizardBtnDifficult.addEventListener("click", lizardChoiceDifficult);
 alienBtnDifficult.addEventListener("click", alienChoiceDifficult);
+
 // page vw functions
 function classicGamePage(){
   game.type = "classic";
@@ -51,6 +54,7 @@ function classicGamePage(){
   hide(winnerWrapClassic);
   show(chooseFighterTextClassic);
   hide(resultTextClassic);
+  show(changeGameBtn);
 };
 
 function displayWinnerClassic(){
@@ -58,6 +62,18 @@ function displayWinnerClassic(){
   hide(classicGameSection);
   hide(chooseFighterTextClassic);
   show(resultTextClassic);
+  hide(changeGameBtn);
+}
+
+function viewMainPage(){
+  show(mainPage);
+  hide(changeGameBtn);
+  hide(classicPageView);
+  hide(classicGameSection);
+  hide(chooseFighterTextClassic);
+  hide(difficultPageView);
+  hide(difficultGameSection);
+hide(chooseFighterTextDifficult);
 }
 
 function hide(element) {
@@ -108,6 +124,7 @@ function difficultGamePage(){
   hide(winnerWrapDifficult);
   show(chooseFighterTextDifficult);
   hide(resultTextDifficult);
+  show(changeGameBtn);
 };
 
 function displayWinnerDifficult(){
@@ -115,4 +132,5 @@ function displayWinnerDifficult(){
   hide(difficultGameSection);
   hide(chooseFighterTextDifficult);
   show(resultTextDifficult);
+  hide(changeGameBtn);
 };
