@@ -132,5 +132,11 @@ class Game {
       displayWinnerDifficult();
     }
   };
-
+  clear(){
+  computerWins.innerText = 0;
+   userWins.innerText = 0;
+   localStorage.clear();
+   this.user.wins = 0;
+   this.computer.wins = 0;
+  }
 };
