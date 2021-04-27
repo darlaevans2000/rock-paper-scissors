@@ -141,16 +141,29 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: r
 }
 
-.result-text {
+.result-text-difficult {
   align-items: center;
   justify-content: center;
   border: none;
   display: flex;
   color: white;
-  font-size: 23px;
+  font-size: 25px;
+}
+
+.result-text-classic {
+  align-items: center;
+  justify-content: center;
+  border: none;
+  display: flex;
+  color: white;
+  font-size: 25px;
+}
+
+.button-img-difficult {
+  cursor: pointer;
+  border: none;
 }
 
 .hidden {
