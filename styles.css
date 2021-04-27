@@ -118,7 +118,7 @@ img {
   height: 115vh;
 }
 
-/* Change Game Button */
+/* Change Game Button & Clear Score Button*/
 .change-game-btn {
   background-color: #14141f;
   border: solid transparent;
@@ -150,6 +150,7 @@ img {
   display: flex;
   align-items: center;
 }
+
 /* Classic Game  */
 .classic-game {
   justify-content: center;

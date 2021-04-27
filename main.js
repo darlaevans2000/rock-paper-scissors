@@ -129,9 +129,11 @@ function alienChoiceDifficult() {
   game.determineWinnerDifficult("alien");
 };
 
-function clearTheWins(){
+//Clear wins from storage
+function clearTheWins() {
   game.clear();
-}
+};
+
 // Show/Hide
 function hide(elements) {
   for (var i = 0; i < elements.length; i++) {
