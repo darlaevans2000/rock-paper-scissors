@@ -84,15 +84,15 @@ function displayWinnerClassic() {
 };
 //User Selections Classic
 function rockChoiceClassic() {
-  game.determineWinner("rock");
+  game.determineWinnerClassic("rock");
 };
 
 function paperChoiceClassic() {
-  game.determineWinner("paper");
+  game.determineWinnerClassic("paper");
 };
 
 function scissorsChoiceClassic() {
-  game.determineWinner("scissors");
+  game.determineWinnerClassic("scissors");
 };
 
 //🦎Difficult Game👽
@@ -108,23 +108,23 @@ function displayWinnerDifficult() {
 };
 //User Selections Difficult
 function rockChoiceDifficult() {
-  game.determineWinner("rock");
+  game.determineWinnerDifficult("rock");
 };
 
 function paperChoiceDifficult() {
-  game.determineWinner("paper");
+  game.determineWinnerDifficult("paper");
 };
 
 function scissorsChoiceDifficult() {
-  game.determineWinner("scissors");
+  game.determineWinnerDifficult("scissors");
 };
 
 function lizardChoiceDifficult() {
-  game.determineWinner("lizard");
+  game.determineWinnerDifficult("lizard");
 };
 
 function alienChoiceDifficult() {
-  game.determineWinner("alien");
+  game.determineWinnerDifficult("alien");
 };
 
 // Show/Hide

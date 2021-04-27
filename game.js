@@ -29,9 +29,8 @@ class Game {
     }
   };
 
-  //Determine Winner
-  determineWinner(choice) {
-    //Determine Classic Winner
+  //Determine Winner Classic Game
+  determineWinnerClassic(choice) {
     if (this.type === "classic") {
       var classicComputerChoice = this.randomChoice();
       var classicUserChoice = choice;
@@ -53,8 +52,11 @@ class Game {
       <img src="./assets/${classicUserChoice}.png" alt="${classicUserChoice}">
       <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
       `
-    } else {
-      //Determine Difficult Winner
+    }
+    };
+
+    //Determine Winner Difficult
+    determineWinnerDifficult(choice) {
       var difficultComputerChoice = this.randomChoice();
       var difficultUserChoice = choice;
 
@@ -83,8 +85,8 @@ class Game {
       <img src="./assets/${difficultUserChoice}.png" alt="${difficultUserChoice}">
       <img src="./assets/${difficultComputerChoice}.png" alt="${difficultComputerChoice}">
       `
-    }
-  };
+    };
+
 
   //Alerts
   winAlert() {
