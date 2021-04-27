@@ -53,39 +53,39 @@ class Game {
       <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
       `
     }
-    };
+  };
 
-    //Determine Winner Difficult
-    determineWinnerDifficult(choice) {
-      var difficultComputerChoice = this.randomChoice();
-      var difficultUserChoice = choice;
+  //Determine Winner Difficult
+  determineWinnerDifficult(choice) {
+    var difficultComputerChoice = this.randomChoice();
+    var difficultUserChoice = choice;
 
-      if (difficultComputerChoice === difficultUserChoice) {
-        this.tieAlert();
+    if (difficultComputerChoice === difficultUserChoice) {
+      this.tieAlert();
 
-      } else if ((difficultComputerChoice === "rock" && difficultUserChoice === "lizard") ||
-        (difficultComputerChoice === "rock" && difficultUserChoice === "scissors") ||
-        (difficultComputerChoice === "paper" && difficultUserChoice === "scissors") ||
-        (difficultComputerChoice === "paper" && difficultUserChoice === "alien") ||
-        (difficultComputerChoice === "scissors" && difficultUserChoice === "paper") ||
-        (difficultComputerChoice === "scissors" && difficultUserChoice === "lizard") ||
-        (difficultComputerChoice === "lizard" && difficultUserChoice === "paper") ||
-        (difficultComputerChoice === "lizard" && difficultUserChoice === "alien") ||
-        (difficultComputerChoice === "alien" && difficultUserChoice === "rock") ||
-        (difficultComputerChoice === "alien" && difficultUserChoice === "scissors")) {
+    } else if ((difficultComputerChoice === "rock" && difficultUserChoice === "lizard") ||
+      (difficultComputerChoice === "rock" && difficultUserChoice === "scissors") ||
+      (difficultComputerChoice === "paper" && difficultUserChoice === "scissors") ||
+      (difficultComputerChoice === "paper" && difficultUserChoice === "alien") ||
+      (difficultComputerChoice === "scissors" && difficultUserChoice === "paper") ||
+      (difficultComputerChoice === "scissors" && difficultUserChoice === "lizard") ||
+      (difficultComputerChoice === "lizard" && difficultUserChoice === "paper") ||
+      (difficultComputerChoice === "lizard" && difficultUserChoice === "alien") ||
+      (difficultComputerChoice === "alien" && difficultUserChoice === "rock") ||
+      (difficultComputerChoice === "alien" && difficultUserChoice === "scissors")) {
 
-        this.loseAlert();
+      this.loseAlert();
 
-      } else {
+    } else {
 
-        this.winAlert();
+      this.winAlert();
 
-      }
-      winnerWrapDifficult.innerHTML = `
+    }
+    winnerWrapDifficult.innerHTML = `
       <img src="./assets/${difficultUserChoice}.png" alt="${difficultUserChoice}">
       <img src="./assets/${difficultComputerChoice}.png" alt="${difficultComputerChoice}">
       `
-    };
+  };
 
 
   //Alerts
