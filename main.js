@@ -60,41 +60,20 @@ if (localStorage.computerWins === undefined) {
 // page vw functions
 function classicGamePage(){
   game.type = "classic";
-  hide(mainPage);
-  show(classicPageView);
-  show(classicGameSection);
-  hide(winnerWrapClassic);
-  show(chooseFighterTextClassic);
-  hide(resultTextClassic);
-  show(changeGameBtn);
+  hide([mainPage, winnerWrapClassic, resultTextClassic]);
+  show([classicPageView, classicGameSection, chooseFighterTextClassic, changeGameBtn]);
 };
 
 function displayWinnerClassic(){
-  show(winnerWrapClassic);
-  hide(classicGameSection);
-  hide(chooseFighterTextClassic);
-  show(resultTextClassic);
-  hide(changeGameBtn);
+  show([winnerWrapClassic, resultTextClassic]);
+  hide([classicGameSection, chooseFighterTextClassic, changeGameBtn]);
 }
 
 function viewMainPage(){
-  show(mainPage);
-  hide(changeGameBtn);
-  hide(classicPageView);
-  hide(classicGameSection);
-  hide(chooseFighterTextClassic);
-  hide(difficultPageView);
-  hide(difficultGameSection);
-hide(chooseFighterTextDifficult);
-}
-
-function hide(element) {
-  element.classList.add("hidden");
+  show([mainPage]);
+  hide([changeGameBtn, classicPageView, classicGameSection, chooseFighterTextClassic, difficultPageView, difficultGameSection, chooseFighterTextDifficult]);
 };
 
-function show(element) {
-  element.classList.remove("hidden");
-};
 // user selections
 function rockChoiceClassic() {
   game.determineWinner("rock");
@@ -130,19 +109,25 @@ function alienChoiceDifficult() {
 
 function difficultGamePage(){
   game.type = "difficult";
-  hide(mainPage);
-  show(difficultPageView);
-  show(difficultGameSection);
-  hide(winnerWrapDifficult);
-  show(chooseFighterTextDifficult);
-  hide(resultTextDifficult);
-  show(changeGameBtn);
+  hide([mainPage, winnerWrapDifficult, resultTextDifficult]);
+  show([difficultPageView, difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
 };
 
 function displayWinnerDifficult(){
-  show(winnerWrapDifficult);
-  hide(difficultGameSection);
-  hide(chooseFighterTextDifficult);
-  show(resultTextDifficult);
-  hide(changeGameBtn);
+  show([winnerWrapDifficult, resultTextDifficult]);
+  hide([difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
+};
+
+function hide(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    element = elements[i];
+    element.classList.add("hidden");
+  }
+};
+
+function show(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    element = elements[i];
+    element.classList.remove("hidden");
+  }
 };
