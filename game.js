@@ -12,10 +12,10 @@ class Game {
     this.choices = [];
   }
 
+//Random Computer Choice
   getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   };
-
 
   randomChoice() {
     var classicChoices = ["rock", "paper", "scissors"];
@@ -29,8 +29,7 @@ class Game {
     }
   };
 
-  //classic game
-
+  //Classic Game
   determineWinner(choice) {
     if (this.type === "classic") {
       var classicComputerChoice = this.randomChoice();
@@ -57,7 +56,7 @@ class Game {
       <img src="./assets/${classicComputerChoice}.png" alt="${classicComputerChoice}">
       `
     } else {
-
+//Difficult Game
       var difficultComputerChoice = this.randomChoice();
       var difficultUserChoice = choice;
 
@@ -94,6 +93,7 @@ class Game {
     }
   };
 
+//Alerts
   winAlert() {
   this.user.wins++;
   userWins.innerText = `${this.user.wins}`;
