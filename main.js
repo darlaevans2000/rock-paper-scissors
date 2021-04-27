@@ -1,50 +1,56 @@
-//game type btns qs
+// QUERY SELECTORS 1️⃣
+//Game Type BTNS
 var classicBtn = document.getElementById("classicGameBtn");
 var difficultBtn = document.getElementById("difficultGameBtn");
-var changeGameBtn = document.getElementById("changeGameButton");
-// game type pages
+var changeGameBtn = document.getElementById("changeGameBtn");
+//Game Pages View=
 var classicPageView = document.getElementById("classicGameChoices");
 var difficultPageView = document.getElementById("difficultGameChoices");
-//main view
+//Main Page QS
 var mainPage = document.getElementById("mainGameSection");
-// game buttons
+//Classic Game BTNS
 var rockBtnClassic = document.getElementById("rockBtnClassic");
 var paperBtnClassic = document.getElementById("paperBtnClassic");
 var scissorsBtnClassic = document.getElementById("scissorsBtnClassic");
-
+//Difficult Game BTNS
 var rockBtnDifficult = document.getElementById("rockBtnDifficult");
 var paperBtnDifficult = document.getElementById("paperBtnDifficult");
 var scissorsBtnDifficult = document.getElementById("scissorsBtnDifficult");
 var lizardBtnDifficult = document.getElementById("lizardBtnDifficult");
 var alienBtnDifficult = document.getElementById("alienBtnDifficult");
-//text
-var resultTextClassic = document.getElementById("resultTextClassic");
+//Wins
 var userWins = document.getElementById("userWins");
 var computerWins = document.getElementById("computerWins");
-var resultTextDifficult = document.getElementById("resultTextDifficult");
-var winnerWrapClassic = document.getElementById("winnerWrapClassic");
-var winnerWrapDifficult = document.getElementById("winnerWrapDifficult");
+//Classic Game View/Text
 var classicGameSection = document.getElementById("classicGame");
-var difficultGameSection = document.getElementById("difficultGame");
+var winnerWrapClassic = document.getElementById("winnerWrapClassic");
+var resultTextClassic = document.getElementById("resultTextClassic");
 var chooseFighterTextClassic = document.getElementById("chooseFighterTextClassic");
+//Difficult Game View/Text
+var difficultGameSection = document.getElementById("difficultGame");
+var winnerWrapDifficult = document.getElementById("winnerWrapDifficult");
+var resultTextDifficult = document.getElementById("resultTextDifficult");
 var chooseFighterTextDifficult = document.getElementById("chooseFighterTextDifficult");
+//Instantiate Game Class
 var game = new Game();
 
-// page view event ls
+//EVENT LISTENERS 2️⃣
+//Game Selection BTNS
 classicBtn.addEventListener("click", classicGamePage);
 difficultBtn.addEventListener("click", difficultGamePage);
 changeGameBtn.addEventListener("click", viewMainPage);
-// user selection event ls
+//Classic Game Choices BTNS
 rockBtnClassic.addEventListener("click", rockChoiceClassic);
 scissorsBtnClassic.addEventListener("click", scissorsChoiceClassic);
 paperBtnClassic.addEventListener("click", paperChoiceClassic);
-
+//Diffiult Game Choices BTNS
 rockBtnDifficult.addEventListener("click", rockChoiceDifficult);
 scissorsBtnDifficult.addEventListener("click", scissorsChoiceDifficult);
 paperBtnDifficult.addEventListener("click", paperChoiceDifficult);
 lizardBtnDifficult.addEventListener("click", lizardChoiceDifficult);
 alienBtnDifficult.addEventListener("click", alienChoiceDifficult);
 
+//Retrieve From Storage 🗄
 if (localStorage.userWins === undefined) {
   localStorage.userWins = 0;
 } else {
@@ -57,7 +63,8 @@ if (localStorage.computerWins === undefined) {
   computerWins.innerText = game.computer.retrieveComputerWinsFromStorage();
 }
 
-// page vw functions
+//FUNCTIONS 3️⃣
+// Classic Game 🪨✂️
 function classicGamePage(){
   game.type = "classic";
   hide([mainPage, winnerWrapClassic, resultTextClassic]);
@@ -74,7 +81,7 @@ function viewMainPage(){
   hide([changeGameBtn, classicPageView, classicGameSection, chooseFighterTextClassic, difficultPageView, difficultGameSection, chooseFighterTextDifficult]);
 };
 
-// user selections
+// User Selections Classic
 function rockChoiceClassic() {
   game.determineWinner("rock");
 };
@@ -87,6 +94,19 @@ function scissorsChoiceClassic() {
   game.determineWinner("scissors");
 };
 
+// Difficult Game 🦎👽
+function difficultGamePage(){
+  game.type = "difficult";
+  hide([mainPage, winnerWrapDifficult, resultTextDifficult]);
+  show([difficultPageView, difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
+};
+
+function displayWinnerDifficult(){
+  show([winnerWrapDifficult, resultTextDifficult]);
+  hide([difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
+};
+
+// User Selections Difficult
 function rockChoiceDifficult() {
   game.determineWinner("rock");
 };
@@ -107,17 +127,7 @@ function alienChoiceDifficult() {
   game.determineWinner("alien");
 };
 
-function difficultGamePage(){
-  game.type = "difficult";
-  hide([mainPage, winnerWrapDifficult, resultTextDifficult]);
-  show([difficultPageView, difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
-};
-
-function displayWinnerDifficult(){
-  show([winnerWrapDifficult, resultTextDifficult]);
-  hide([difficultGameSection, chooseFighterTextDifficult, changeGameBtn]);
-};
-
+// 💚 Show/Hide 🛑
 function hide(elements) {
   for (var i = 0; i < elements.length; i++) {
     element = elements[i];
