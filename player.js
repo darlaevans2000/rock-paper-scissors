@@ -19,6 +19,9 @@ class Player {
     var userWins = JSON.parse(userWinsFromStorage);
     this.wins = userWins;
     return userWins;
+  };
+
+  retrieveComputerWinsFromStorage() {
     var computerWinsFromStorage = localStorage.getItem("computerWins");
     var computerWins = JSON.parse(computerWinsFromStorage);
     this.wins = computerWins;
